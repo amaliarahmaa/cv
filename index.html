@@ -3,163 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Cahaya Dewi (Fida)</title>
+    <title>Portfolio - Rahma Amalia</title>
     <style>
-        /* CSS Internal */
+        /* Modern UI/UX Variables */
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --text-color: #333;
-            --bg-color: #f4f7f6;
+            --primary-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            --accent-color: #00d2ff;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --white: #ffffff;
+            --bg-soft: #f8f9fa;
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.3s ease;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background-color: var(--bg-soft);
+            color: var(--text-dark);
         }
 
+        /* Header / Hero Section */
         header {
-            background: var(--primary-color);
-            color: #ffffff;
-            padding: 3rem 1rem;
+            background: var(--primary-gradient);
+            color: var(--white);
+            padding: 5rem 1rem;
             text-align: center;
-            border-bottom: 5px solid var(--secondary-color);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
-            letter-spacing: 1px;
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-transform: uppercase;
         }
 
         header p {
-            margin: 10px 0 0;
+            margin: 15px 0 0;
             font-weight: 300;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
 
         .container {
-            max-width: 850px;
-            margin: 30px auto;
+            max-width: 900px;
+            margin: -50px auto 50px;
             padding: 0 20px;
         }
 
+        /* Glassmorphism Card Style */
         section {
-            background: #fff;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background: var(--white);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         h2 {
-            color: var(--primary-color);
-            border-left: 4px solid var(--secondary-color);
-            padding-left: 15px;
+            color: #1e3c72;
+            font-size: 1.8rem;
             margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .grid-skills {
+        h2::after {
+            content: '';
+            height: 3px;
+            flex-grow: 1;
+            background: linear-gradient(to right, var(--accent-color), transparent);
+            border-radius: 3px;
+        }
+
+        .profile-text {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* Project Cards */
+        .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .skill-item {
-            background: #eef2f3;
-            padding: 10px;
-            border-radius: 6px;
-            text-align: center;
-            font-size: 0.9rem;
-            font-weight: 500;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
         }
 
         .project-card {
-            border: 1px solid #eee;
-            padding: 20px;
-            margin-top: 15px;
-            border-radius: 8px;
-            transition: transform 0.2s;
+            background: var(--bg-soft);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #edf2f7;
+            position: relative;
+            overflow: hidden;
         }
 
-        .project-card:hover {
-            transform: translateY(-3px);
-            border-color: var(--secondary-color);
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--accent-color);
         }
 
         .project-card h3 {
             margin-top: 0;
-            color: var(--secondary-color);
+            color: #2a5298;
+            font-size: 1.2rem;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        /* Skills Badge Area */
+        .grid-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-item {
+            background: #eef2f3;
+            color: #2a5298;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #d1d8e0;
+        }
+
+        .skill-item:hover {
+            background: var(--primary-gradient);
+            color: white;
+            transform: translateY(-2px);
         }
 
         footer {
             text-align: center;
             padding: 40px 20px;
-            color: #888;
-            font-size: 0.85rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
         }
 
-        /* Responsif untuk HP */
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            section { padding: 15px; }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project-grid { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.2rem; }
+            header { padding: 4rem 1rem; }
+            section { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Cahaya Dewi</h1>
-        <p>Informatics Student @ Itenas | Cloud Computing Enthusiast</p>
+        <h1>Rahma Amalia</h1>
+        <p>Informatics Engineering | Cloud & AI Specialist</p>
     </header>
 
     <div class="container">
         
         <section id="about">
-            <h2>Profil Profesional</h2>
-            <p>Mahasiswi Teknik Informatika semester 5 di Institut Teknologi Nasional Bandung. Fokus pada pengembangan solusi berbasis Cloud, IoT, dan Artificial Intelligence. Saat ini sedang mendalami integrasi sistem cerdas untuk kebutuhan industri dan sosial.</p>
+            <h2>Profil</h2>
+            <p class="profile-text">
+                Mahasiswi Teknik Informatika di <strong>Itenas Bandung</strong> yang berdedikasi tinggi dalam mengeksplorasi teknologi terbaru. Berpengalaman dalam mengerjakan proyek berbasis IoT dan Computer Vision, serta memiliki minat besar dalam arsitektur Cloud Computing untuk membangun sistem yang skalabel.
+            </p>
         </section>
 
         <section id="education">
             <h2>Pendidikan</h2>
-            <p><strong>S1 Teknik Informatika</strong><br>
-            Institut Teknologi Nasional Bandung (2023 - 2027)</p>
+            <div style="border-left: 2px solid #eee; padding-left: 20px;">
+                <h3 style="margin: 0; font-size: 1.1rem;">S1 Teknik Informatika</h3>
+                <p style="margin: 5px 0; color: var(--text-light);">Institut Teknologi Nasional Bandung</p>
+                <small style="color: var(--accent-color); font-weight: bold;">2023 - Sekarang</small>
+            </div>
         </section>
 
         <section id="projects">
-            <h2>Proyek Portofolio</h2>
-            
-            <div class="project-card">
-                <h3>Calm Reminder (IoT System)</h3>
-                <p>Membangun perangkat pendeteksi detak jantung real-time untuk analisis tingkat stres pengguna menggunakan sensor IoT.</p>
-            </div>
+            <h2>Proyek Unggulan</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Calm Reminder</h3>
+                    <p>Sistem cerdas berbasis IoT yang memantau detak jantung untuk mendeteksi stres secara dini.</p>
+                </div>
 
-            <div class="project-card">
-                <h3>Pothole Detection AI</h3>
-                <p>Mengembangkan model Computer Vision berbasis CNN untuk mengidentifikasi kerusakan jalan raya secara otomatis melalui gambar.</p>
+                <div class="project-card">
+                    <h3>Pothole Detection</h3>
+                    <p>Implementasi deep learning (CNN) untuk monitoring kondisi infrastruktur jalan raya.</p>
+                </div>
             </div>
         </section>
 
         <section id="skills">
-            <h2>Keahlian Teknis</h2>
+            <h2>Keahlian</h2>
             <div class="grid-skills">
                 <div class="skill-item">Cloud Computing</div>
-                <div class="skill-item">IoT Development</div>
+                <div class="skill-item">CI/CD (GitHub Actions)</div>
+                <div class="skill-item">IoT Programming</div>
                 <div class="skill-item">Computer Vision</div>
+                <div class="skill-item">Alibaba Cloud ECS</div>
                 <div class="skill-item">Data Mining</div>
-                <div class="skill-item">Robotics</div>
-                <div class="skill-item">Git & GitHub</div>
+                <div class="skill-item">Git & Linux</div>
             </div>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Cahaya Dewi. Dibuat untuk memenuhi Tugas Mata Kuliah Komputasi Awan.</p>
+        <p>&copy; 2026 Rahma Amalia. <br> Dikembangkan untuk Tugas Komputasi Awan - Itenas.</p>
     </footer>
 
 </body>
