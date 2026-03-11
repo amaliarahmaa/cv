@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Cahaya Dewi (Fida)</title>
+    <style>
+        /* CSS Internal */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: #fff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+            margin-top: 0;
+        }
+
+        .grid-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-item {
+            background: #eef2f3;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .project-card {
+            border: 1px solid #eee;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--secondary-color);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        /* Responsif untuk HP */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            section { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cahaya Dewi</h1>
+        <p>Informatics Student @ Itenas | Cloud Computing Enthusiast</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>Profil Profesional</h2>
+            <p>Mahasiswi Teknik Informatika semester 5 di Institut Teknologi Nasional Bandung. Fokus pada pengembangan solusi berbasis Cloud, IoT, dan Artificial Intelligence. Saat ini sedang mendalami integrasi sistem cerdas untuk kebutuhan industri dan sosial.</p>
+        </section>
+
+        <section id="education">
+            <h2>Pendidikan</h2>
+            <p><strong>S1 Teknik Informatika</strong><br>
+            Institut Teknologi Nasional Bandung (2023 - 2027)</p>
+        </section>
+
+        <section id="projects">
+            <h2>Proyek Portofolio</h2>
+            
+            <div class="project-card">
+                <h3>Calm Reminder (IoT System)</h3>
+                <p>Membangun perangkat pendeteksi detak jantung real-time untuk analisis tingkat stres pengguna menggunakan sensor IoT.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Pothole Detection AI</h3>
+                <p>Mengembangkan model Computer Vision berbasis CNN untuk mengidentifikasi kerusakan jalan raya secara otomatis melalui gambar.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Keahlian Teknis</h2>
+            <div class="grid-skills">
+                <div class="skill-item">Cloud Computing</div>
+                <div class="skill-item">IoT Development</div>
+                <div class="skill-item">Computer Vision</div>
+                <div class="skill-item">Data Mining</div>
+                <div class="skill-item">Robotics</div>
+                <div class="skill-item">Git & GitHub</div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Cahaya Dewi. Dibuat untuk memenuhi Tugas Mata Kuliah Komputasi Awan.</p>
+    </footer>
+
+</body>
+</html>
